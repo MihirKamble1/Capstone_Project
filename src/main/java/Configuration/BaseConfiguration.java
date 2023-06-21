@@ -20,9 +20,9 @@ public class BaseConfiguration {
 		 if(Port.equalsIgnoreCase("5555"))
 	        {
 	            nodeURL = "http://192.168.241.1:4444/wd/hub";
-	            System.out.println("Edge Browser Initiated");
-	            DesiredCapabilities capabilities = DesiredCapabilities.edge();            
-	            capabilities.setBrowserName("MicrosoftEdge");
+	            System.out.println("Chrome Browser Initiated");
+	            DesiredCapabilities capabilities = DesiredCapabilities.chrome();            
+	            capabilities.setBrowserName("chrome");
 	            capabilities.setPlatform(Platform.WINDOWS);
 	            
 	            driver = new RemoteWebDriver(new URL(nodeURL),capabilities);
@@ -37,7 +37,7 @@ public class BaseConfiguration {
 	            if(Port.equalsIgnoreCase("6666"))
 	            {
 	                nodeURL = "http://192.168.241.1:4444/wd/hub";
-	                System.out.println("Firefox Browser Initiated");
+	                System.out.println("Edge Browser Initiated");
 	                DesiredCapabilities capabilities1 = DesiredCapabilities.edge();
 	                capabilities1.setBrowserName("MicrosoftEdge");
 	                capabilities1.setPlatform(Platform.WINDOWS);

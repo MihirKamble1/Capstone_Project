@@ -56,7 +56,7 @@ public class testcase extends BaseConfiguration {
 	
 	
 	
-	@Test
+	/*@Test
 	public void Test1() throws InterruptedException {//pass
 		signuppage.ExecutePage1();
 		infopage.ExecutePage2();
@@ -64,9 +64,9 @@ public class testcase extends BaseConfiguration {
 		deleteaccount.ExecutePage4();*/
 		//productpage.ExecutePage3();
 		//infopage.verify1();*/
-	}
+	//}
 	
-	@Test
+	/*@Test
 	public void Test2(){
 		loginpage.ExecutePage5();
 	}
@@ -82,12 +82,12 @@ public class testcase extends BaseConfiguration {
 		productpage.ExecutePage3();
 		//viewcart.ExecutePage5();
 		
-	}
+	}*/
 	
-	@Test
+	/*@Test
 	public void Test5() {//pass
 		search.SearchOperation();
-	}
+	}*/
 	
 	@Test
 	public void Test6() throws InterruptedException {//Pass

@@ -32,7 +32,7 @@ public class ReviewPage {
 	@FindBy(xpath="//*[@id='review']")
 	public WebElement reviewfield;
 	
-	@FindBy(xpath="//*[@id='button-review']")
+	@FindBy(xpath="//*[@id='button-review' and @class='btn btn-default pull-right']")
 	public WebElement submit;
 	
 	@FindBy(xpath="//*[text()='Thank you for your review.']")
@@ -55,7 +55,8 @@ public class ReviewPage {
 		namefield.sendKeys("Rohit");
 		emailfield.sendKeys("RohitBc@gmail.com");
 		System.out.println(reviewfield.isDisplayed());
-		reviewfield.sendKeys("The worst Product i have seen in my life");
+		reviewfield.sendKeys("The worst Product i have seen in my life!");
+		Thread.sleep(2000);
 		submit.click();
 		System.out.println(reviewtext.isDisplayed());
 	}
