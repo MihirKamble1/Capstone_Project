@@ -56,7 +56,7 @@ public class testcase extends BaseConfiguration {
 	
 	
 	
-	/*@Test
+	@Test
 	public void Test1() throws InterruptedException {//pass
 		signuppage.ExecutePage1();
 		infopage.ExecutePage2();
@@ -64,35 +64,35 @@ public class testcase extends BaseConfiguration {
 		deleteaccount.ExecutePage4();*/
 		//productpage.ExecutePage3();
 		//infopage.verify1();*/
-	//}
+	}
 	
-/*	@Test
+	@Test
 	public void Test2(){
 		loginpage.ExecutePage5();
-	}*/
+	}
 	
-	/*@Test
-	public void Test3() {//pass
+	@Test 
+	public void Test3() {
+		loginpage.InvalidgLogin();
+	}
+	
+	@Test
+	public void Test4() {//pass
 		// Adding products to the cart and removing them 
 		productpage.ExecutePage3();
 		//viewcart.ExecutePage5();
 		
-	}*/
+	}
 	
-	/*@Test
-	public void Test4() {//pass
+	@Test
+	public void Test5() {//pass
 		search.SearchOperation();
-	}*/
+	}
 	
-	/*@Test
-	public void Test5() throws InterruptedException {//Pass
+	@Test
+	public void Test6() throws InterruptedException {//Pass
 		reviewpage.AddReview();
 		
-	}*/
-	
-	@Test 
-	public void Test6() {
-		loginpage.InvalidgLogin();
 	}
 	
 	
