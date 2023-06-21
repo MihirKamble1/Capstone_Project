@@ -32,7 +32,10 @@ public class LoginPage {
 	@FindBy(xpath="//*[text()=' Logout']")
 	public WebElement logout;
 	
-	 private String readParameterFromFile(String filePath, String parameterName) {
+	@FindBy(xpath="//*[text()='Your email or password is incorrect!']")
+	public WebElement text;
+	
+	  public String readParameterFromFile(String filePath, String parameterName) {
 	        String parameterValue = null;
 	        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
 	            String line;
@@ -51,12 +54,24 @@ public class LoginPage {
 	
 	public void ExecutePage5() {
 		String username1 = readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "username1");
-		
+		String password1 = readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "password1");
 		login.click();
-		emailid.sendKeys("Mihir1234@gmail.com");
-		password.sendKeys("Mihir@123");
+		emailid.sendKeys(username1);
+		password.sendKeys(password1);
 		loginbutton.click();
 		logout.click();
+		
+	}
+	
+	public void InvalidgLogin() {
+		String usernameInvalid = readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "usernameInvalid");
+		String password1 = readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "password1");
+		login.click();
+		emailid.sendKeys(usernameInvalid);
+		password.sendKeys(password1);
+		loginbutton.click();
+		System.out.println(text.isDisplayed());
+		
 		
 	}
 	

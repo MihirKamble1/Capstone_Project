@@ -19,6 +19,7 @@ import PageObjectModel.SignUpPage;
 import PageObjectModel.ViewCart;
 import PageObjectModel.ProductsPage;
 import PageObjectModel.ReviewPage;
+import PageObjectModel.SearchProduct;
 
 public class testcase extends BaseConfiguration {
 	
@@ -29,6 +30,7 @@ public class testcase extends BaseConfiguration {
 	ViewCart viewcart;
 	ReviewPage reviewpage;
 	LoginPage loginpage;
+	SearchProduct search;
 	WebDriver driver;
 	
 	
@@ -44,6 +46,8 @@ public class testcase extends BaseConfiguration {
 		viewcart = new ViewCart(driver);
 		reviewpage = new ReviewPage(driver);
 		loginpage = new LoginPage(driver);
+		search = new SearchProduct(driver);
+		
 		
 		
 		
@@ -52,39 +56,45 @@ public class testcase extends BaseConfiguration {
 	
 	
 	
-	@Test
+	/*@Test
 	public void Test1() throws InterruptedException {//pass
 		signuppage.ExecutePage1();
 		infopage.ExecutePage2();
 		/*Thread.sleep(2000);
 		deleteaccount.ExecutePage4();*/
 		//productpage.ExecutePage3();
-		//infopage.verify1();
-	}
+		//infopage.verify1();*/
+	//}
 	
-	@Test
+/*	@Test
 	public void Test2(){
 		loginpage.ExecutePage5();
-	}
+	}*/
 	
-	@Test
+	/*@Test
 	public void Test3() {//pass
 		// Adding products to the cart and removing them 
 		productpage.ExecutePage3();
 		//viewcart.ExecutePage5();
 		
-	}
+	}*/
 	
-	@Test
+	/*@Test
 	public void Test4() {//pass
-		productpage.SearchOperation();
-	}
+		search.SearchOperation();
+	}*/
 	
-	@Test
+	/*@Test
 	public void Test5() throws InterruptedException {//Pass
 		reviewpage.AddReview();
 		
+	}*/
+	
+	@Test 
+	public void Test6() {
+		loginpage.InvalidgLogin();
 	}
+	
 	
 	
 	

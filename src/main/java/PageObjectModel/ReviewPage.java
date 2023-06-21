@@ -17,6 +17,9 @@ public class ReviewPage {
 	@FindBy(xpath="//*[text()=' Products']")
 	public WebElement productslink;
 	
+	@FindBy(xpath="//*[text()='All Products']")
+	public WebElement allproducts;
+	
 	@FindBy(xpath="//*[text()='View Product']")
 	public WebElement viewproductlink;
 	
@@ -29,9 +32,17 @@ public class ReviewPage {
 	@FindBy(xpath="//*[@id='review']")
 	public WebElement reviewfield;
 	
+	@FindBy(xpath="//*[@id='button-review']")
+	public WebElement submit;
+	
+	@FindBy(xpath="//*[text()='Thank you for your review.']")
+	public WebElement reviewtext;
+	
 	public void AddReview() throws InterruptedException {
-		productslink.isDisplayed();
+		
 		productslink.click();
+		
+		System.out.println(allproducts.isDisplayed());
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, 500)");
@@ -43,8 +54,10 @@ public class ReviewPage {
 		viewproductlink.click();
 		namefield.sendKeys("Rohit");
 		emailfield.sendKeys("RohitBc@gmail.com");
+		System.out.println(reviewfield.isDisplayed());
 		reviewfield.sendKeys("The worst Product i have seen in my life");
-		
+		submit.click();
+		System.out.println(reviewtext.isDisplayed());
 	}
 	
 

@@ -83,13 +83,13 @@ public class ProductsPage {
 	}
 	
 	//for searching the product
-	public void SearchOperation() {
+	/*public void SearchOperation() {
 		product.click();
 		/*JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");*/
-		search.sendKeys("Dress");
+	/*	search.sendKeys("Dress");
 		searchbutton.click();
 		
-	}
+	}*/
 
 }

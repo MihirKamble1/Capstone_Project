@@ -85,6 +85,10 @@ public class AccountInformationPage {
 	@FindBy(xpath="//*[text()='Continue']")
 	public WebElement continuebutton1;
 	
+	LoginPage control= new LoginPage(driver);
+	
+	
+	
 	
 	
 	//the info account created and continue is displayed or not
@@ -101,7 +105,14 @@ public class AccountInformationPage {
 	public void ExecutePage2() throws InterruptedException {
 		
 		//JavascriptExecutor js = (JavascriptExecutor) driver;
-		
+		String firstname1 = control.readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "firstname1");
+		String lastname1 = control.readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "lastname1");
+		String state1 = control.readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "state1");
+		String city1 = control.readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "city1");
+		String address = control.readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "address");
+		String company1 = control.readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "company1");
+		String zipcode1 = control.readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "zipcode1");
+		String mobileno1 = control.readParameterFromFile("src/main/java/ConfigurationFile/ConfigFile.properties", "mobileno1");
 		title.click();
 		password.sendKeys("luck@1234");
 		
@@ -116,20 +127,20 @@ public class AccountInformationPage {
 		//checkbox1.click();
 		//checkbox2.click();
 		
-		firstname.sendKeys("Mi");
-		lastname.sendKeys("Hi");
-		company.sendKeys("Axis");
-		address1.sendKeys("D nagar");
+		firstname.sendKeys(firstname1);
+		lastname.sendKeys(lastname1);
+		company.sendKeys(company1);
+		address1.sendKeys(address);
 		
 		sel4.selectByValue("India");
 		
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("window.scrollBy(0, 250)");
 		
-		state.sendKeys("Drystate");
-		city.sendKeys("Drycity");
-		zipcode.sendKeys("123456");
-		mobilenumber.sendKeys("1234567897");
+		state.sendKeys(state1);
+		city.sendKeys(city1);
+		zipcode.sendKeys(zipcode1);
+		mobilenumber.sendKeys(mobileno1);
 		JavascriptExecutor js2 = (JavascriptExecutor) driver;
 		js2.executeScript("window.scrollBy(0, 250)");
 		
