@@ -156,10 +156,10 @@ public class AccountInformationPage {
 	    js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");	    	    
 
 	    continuebutton.click();
-	    Thread.sleep(2000);
+	    //Thread.sleep(2000);
 	    
-	    deleteaccount.click();
-	    continuebutton1.click();
+	  //  deleteaccount.click();
+	    //continuebutton1.click();
 	    
 	    
 	}

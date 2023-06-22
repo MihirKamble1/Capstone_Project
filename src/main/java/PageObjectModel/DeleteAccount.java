@@ -23,8 +23,9 @@ public class DeleteAccount {
 	@FindBy(xpath="//*[text()='Continue']")
 	public WebElement continuebutton;
 	
-	public void ExecutePage4() {
+	public void ExecutePage4() throws InterruptedException {
 		deleteaccount.isDisplayed();
+		Thread.sleep(3000);
 		deleteaccount.click();
 		accountdeldisplay.isDisplayed();
 		continuebutton.isDisplayed();

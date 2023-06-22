@@ -5,8 +5,13 @@
     <classes>
       <class name="TestCases.testcase">
         <methods>
-          <include name="Test5"/>
+          <include name="RemovingfromCart"/>
+          <include name="AddReviewToProduct"/>
+          <include name="Login"/>
           <include name="Setup"/>
+          <include name="RegisterUser"/>
+          <include name="Search"/>
+          <include name="LoginWithInvalid"/>
         </methods>
       </class> <!-- TestCases.testcase -->
     </classes>

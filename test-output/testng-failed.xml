@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="Firefox Test(failed)">
-    <parameter name="Port" value="6666"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="TestCases.testcase">
         <methods>
-          <include name="Test6"/>
+          <include name="RemovingfromCart"/>
+          <include name="AddReviewToProduct"/>
+          <include name="Login"/>
           <include name="Setup"/>
+          <include name="RegisterUser"/>
+          <include name="Search"/>
+          <include name="LoginWithInvalid"/>
         </methods>
       </class> <!-- TestCases.testcase -->
     </classes>
-  </test> <!-- Firefox Test(failed) -->
-  <test thread-count="5" parallel="tests" name="Chrome Test(failed)">
-    <parameter name="Port" value="5555"/>
-    <classes>
-      <class name="TestCases.testcase">
-        <methods>
-          <include name="Test6"/>
-          <include name="Setup"/>
-        </methods>
-      </class> <!-- TestCases.testcase -->
-    </classes>
-  </test> <!-- Chrome Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

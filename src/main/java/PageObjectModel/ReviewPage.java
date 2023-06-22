@@ -52,6 +52,10 @@ public class ReviewPage {
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
 		viewproductlink.click();
+		
+		JavascriptExecutor js2 = (JavascriptExecutor) driver;
+		js2.executeScript("window.scrollBy(0, 500)");
+		
 		namefield.sendKeys("Rohit");
 		emailfield.sendKeys("RohitBc@gmail.com");
 		System.out.println(reviewfield.isDisplayed());

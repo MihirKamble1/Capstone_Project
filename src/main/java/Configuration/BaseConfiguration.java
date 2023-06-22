@@ -20,9 +20,9 @@ public class BaseConfiguration {
 		 if(Port.equalsIgnoreCase("5555"))
 	        {
 	            nodeURL = "http://192.168.241.1:4444/wd/hub";
-	            System.out.println("Chrome Browser Initiated");
-	            DesiredCapabilities capabilities = DesiredCapabilities.chrome();            
-	            capabilities.setBrowserName("chrome");
+	            System.out.println("Edge Browser Initiated");
+	            DesiredCapabilities capabilities = DesiredCapabilities.edge();            
+	            capabilities.setBrowserName("MicrosoftEdge");
 	            capabilities.setPlatform(Platform.WINDOWS);
 	            
 	            driver = new RemoteWebDriver(new URL(nodeURL),capabilities);
@@ -52,9 +52,7 @@ public class BaseConfiguration {
 		return driver;
 	}
 	
-	public void closeAd() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("const elements = document.getElementsByClassName('adsbygoogle adsbygoogle-noablate'); while (elements.length > 0) elements[0].remove()");
+	
 	}
 	
 	
@@ -67,4 +65,4 @@ public class BaseConfiguration {
 	
 
 
-}
+

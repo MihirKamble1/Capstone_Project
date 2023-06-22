@@ -56,41 +56,41 @@ public class testcase extends BaseConfiguration {
 	
 	
 	
-	@Test
-	public void Test1() throws InterruptedException {//pass
+	@Test(priority = 1)
+	public void RegisterUser() throws InterruptedException {//pass
 		signuppage.ExecutePage1();
 		infopage.ExecutePage2();
-		/*Thread.sleep(2000);
-		deleteaccount.ExecutePage4();*/
+		
+		deleteaccount.ExecutePage4();
 		//productpage.ExecutePage3();
 		//infopage.verify1();*/
 	}
 	
-	@Test
-	public void Test2(){
+	@Test(priority = 2)
+	public void Login(){
 		loginpage.ExecutePage5();
 	}
 	
-	@Test 
-	public void Test3() {
+	@Test(priority = 3)
+	public void LoginWithInvalid() {
 		loginpage.InvalidgLogin();
 	}
 	
-	@Test
-	public void Test4() {//pass
+	@Test(priority = 4)
+	public void RemovingfromCart() {//pass
 		// Adding products to the cart and removing them 
 		productpage.ExecutePage3();
 		//viewcart.ExecutePage5();
 		
 	}
 	
-	@Test
-	public void Test5() {//pass
+	@Test(priority = 5)
+	public void Search() {//pass
 		search.SearchOperation();
 	}
 	
-	@Test
-	public void Test6() throws InterruptedException {//Pass
+	@Test(priority = 6)
+	public void AddReviewToProduct() throws InterruptedException {//Pass
 		reviewpage.AddReview();
 		
 	}

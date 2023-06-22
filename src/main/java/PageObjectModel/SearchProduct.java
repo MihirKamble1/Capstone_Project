@@ -53,6 +53,9 @@ public class SearchProduct {
 	@FindBy(xpath="(//*[text()='Add to cart'])[17]")
 	public WebElement p9;
 	
+	@FindBy(xpath="//*[text()=' Cart']")
+	public WebElement cartbutton1;
+	
 	public void SearchOperation() {
 		product.click();
 		JavascriptExecutor js0 = (JavascriptExecutor) driver;
@@ -77,6 +80,8 @@ public class SearchProduct {
 		continueB.click();
 		p6.click();
 		continueB.click();
+		
+		cartbutton1.click();
 		
 		JavascriptExecutor js2 = (JavascriptExecutor) driver;
 		js2.executeScript("window.scrollBy(0, 500)");

@@ -6,21 +6,10 @@
     <classes>
       <class name="TestCases.testcase">
         <methods>
-          <include name="Test6"/>
           <include name="Setup"/>
+          <include name="RegisterUser"/>
         </methods>
       </class> <!-- TestCases.testcase -->
     </classes>
   </test> <!-- Firefox Test(failed) -->
-  <test thread-count="5" parallel="tests" name="Chrome Test(failed)">
-    <parameter name="Port" value="5555"/>
-    <classes>
-      <class name="TestCases.testcase">
-        <methods>
-          <include name="Test6"/>
-          <include name="Setup"/>
-        </methods>
-      </class> <!-- TestCases.testcase -->
-    </classes>
-  </test> <!-- Chrome Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
